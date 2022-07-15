@@ -1,4 +1,5 @@
 import CorpoEsquerdaPost from "./CorpoEsquerdaPost";
+
 export default function CorpoEsquerdaPosts() {
     const posts = [
         {
