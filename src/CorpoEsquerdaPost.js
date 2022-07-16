@@ -1,4 +1,23 @@
+import React from "react";
+
 export default function CorpoEsquerdaPost(props){
+    const [curtida,setCurtida] = React.useState("md hydrated");
+    const [icone,setIcone] = React.useState("heart-outline");
+    const [quantidadeCurtidas,setQuantidadeCurtidas] = React.useState(props.quantidadeCurtidas);
+    console.log(quantidadeCurtidas);
+
+    function curtirPublicacao(){
+        if(curtida==="md hydrated") {
+            setCurtida("md hydrated vermelho");
+            setIcone("heart");
+            setQuantidadeCurtidas(props.quantidadeCurtidas+1)
+        }
+        if(curtida==="md hydrated vermelho") {
+            setCurtida("md hydrated");
+            setIcone("heart-outline");
+            setQuantidadeCurtidas(props.quantidadeCurtidas)
+        }
+    }
     return (
             <div class="post">
                 <div class="topo">
@@ -18,7 +37,7 @@ export default function CorpoEsquerdaPost(props){
                 <div class="fundo">
                     <div class="acoes">
                         <div>
-                            <ion-icon name="heart-outline"></ion-icon>
+                            <ion-icon name={icone} class={curtida} onClick={curtirPublicacao}></ion-icon>
                             <ion-icon name="chatbubble-outline"></ion-icon>
                             <ion-icon name="paper-plane-outline"></ion-icon>
                         </div>
@@ -30,7 +49,7 @@ export default function CorpoEsquerdaPost(props){
                     <div class="curtidas">
                         <img src={props.imgCurtida} />
                         <div class="texto">
-                            Curtido por <strong>{props.curtidoPor}</strong> e <strong>{props.quantidadeCurtidas}</strong>
+                            Curtido por <strong>{props.curtidoPor}</strong> e <strong>outras {(quantidadeCurtidas).toLocaleString('pt-BR')} pessoas</strong>
                         </div>
                     </div>
                 </div>

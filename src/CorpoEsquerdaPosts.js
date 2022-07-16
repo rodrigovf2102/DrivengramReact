@@ -8,7 +8,7 @@ export default function CorpoEsquerdaPosts() {
             imgConteudo: "./img/gato-telefone.svg",
             imgCurtida: "./img/respondeai.svg",
             curtidoPor: "respondeai",
-            quantidadeCurtidas: "outras 101.523 pessoas"
+            quantidadeCurtidas: 101523
         },
         {
             imgUsuario: "./img/barked.svg",
@@ -16,7 +16,7 @@ export default function CorpoEsquerdaPosts() {
             imgConteudo: "./img/dog.svg",
             imgCurtida: "./img/adorable_animals.svg",
             curtidoPor: "adorable_animals",
-            quantidadeCurtidas: "outras 99.159 pessoas"
+            quantidadeCurtidas: 99159
         }
     ]
     return (
